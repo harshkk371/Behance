@@ -1,0 +1,168 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Already set for even distribution */
+    padding: 20px;
+    background-color: #fff;
+    /* position: sticky; */ /* Uncomment for a sticky navbar */
+    top: 0;
+    z-index: 100;
+    border-bottom: 0.5px solid gray;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;  This is removed */
+  }
+  
+  .navbar-logo {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0; /* Removed margin-left for centering */
+    padding: 0 20px; /* Added padding for better centering calculations */
+    justify-items: space-between; /* Center navigation links */
+    width: 100%; /* Added width for centering calculations */
+    
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  
+  .nav-item {
+    position: relative; /* Needed for dropdown positioning */
+    margin: 0 10px; /* Add spacing between navigation links */
+  }
+  
+  .nav-links {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px; /* Add some padding for better dropdown placement */
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links:not(.dropdown)::after {  /* Target non-dropdown items using ::after */
+    display: none;  /* Hide the pseudo-element that creates the caret */
+  }
+  
+  .nav-item:hover > .nav-links { /* Increased specificity with descendant selector */
+    color: #007bff;
+  }
+  
+  .nav-item:hover > .nav-links:after {
+    transform: rotate(-90deg); /* Rotate caret on hover */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Hide dropdown menus by default */
+    position: absolute; /* Absolute positioning relative to parent element */
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+    top: 100%; /* Position dropdown menu below parent element */
+    left: 0;
+    width: 200px; /* Make dropdown menu full width */
+    z-index: 1; /* Set z-index to*/
+  }
+  
+  
+  
+  .dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer; /* Make dropdown items clickable */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1; /* Add hover effect for dropdown items */
+  }
+  
+  /* New styles for right-aligned login/signup */
+  .login-signup {
+    display: flex; /* Wrap login and signup in a container */
+  }
+  
+  .nav-item.login-signup {
+    margin-left: auto; /* Push the container to the right */
+    margin-right: 0; /* Remove margin-right for proper alignment */
+  }
+  .nav-item:hover .dropdown-menu { 
+    display: block;
+  }
+  
+  button{
+    display: flex;
+    width: 120px;
+    border-radius: 30%;
+    background-color: #6186ad;
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+  }
+  
+  .button-18:hover,
+  .button-18:focus { 
+    background-color: #16437E;
+    color: #ffffff;
+  }
+  
+  .button-18:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+  }
+  
+  .button-18:disabled { 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+  
+  }
+  .left,.right{
+display: flex;
+align-self: center;
+  }
+  .btn1{
+    background-color: rgba(0, 87, 255, 1);
+    color: rgb(222, 232, 255,1);
+  }
+  .btn2{
+    background-color: rgb(222, 232, 255,1);
+    color: blue;
+  }
+  
+
+  

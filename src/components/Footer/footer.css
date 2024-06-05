@@ -1,0 +1,40 @@
+.footerHeading{
+    font-size: 64px !important;
+    color: white;
+  }
+  
+  .footerLine{
+    margin-top: 30px;
+    height: 0.2px;
+    background-color: white;
+  }
+  .footerpara{
+    color: white;
+    display: flex;
+   justify-content: space-between;
+   margin-left: 2cm;
+  }
+  
+  .footerBranding{
+    margin-top: 25px;
+    display: flex;
+    gap: 140px;
+    color: white;
+    justify-content: space-between;
+  }
+  .branding1{
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .branding2{
+    text-decoration-style: none;
+    display: flex;
+    flex:2;
+    justify-content: space-around;
+  }
+  .branding2 > p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
